@@ -1,0 +1,7 @@
+{
+"name": "serial port scanner example",
+"version": "1.0.0",
+"description": "my first node.js app",
+"dependencies": { }
+}
+
