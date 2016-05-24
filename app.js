@@ -4,17 +4,18 @@ var portName;
    SerialPort = serialport.SerialPort; // make a local instance of it
    serialport.list(function (err, ports) {
   ports.forEach(function(port) {
-      //portName = port.comName;
+      
+      portName = port.comName;
     console.log(port.comName);
 	
   });
 });
    // get port name from the command line:
-   portName = process.argv[2];
+  // portName = process.argv[2];
    console.log("I am running")
 
 
-var myPort = new SerialPort(portName, {
+var myPort = new SerialPort('COM5', {
    baudRate: 9600,
    // look for newline at the end of each data packet:
    //parser: serialport.parsers.readline("\n")
